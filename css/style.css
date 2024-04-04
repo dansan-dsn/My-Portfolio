@@ -1,0 +1,59 @@
+
+main {
+    background: rgb(244, 251, 255);
+    border-radius: .8em;
+}
+
+.side-bar {
+    background: #f8feff;
+    border-radius: .9em;
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); */
+    box-shadow: 0px 8px 16px 4px rgb(221, 220, 220);
+}
+
+._title {
+    text-align: center;
+}
+
+.bxl-youtube {
+    color: red;
+    font-size: 2em;
+}
+
+.title-word {
+    transform: translate(-200px);
+    font-size: 20px;
+}
+
+i {
+    opacity: .8;
+}
+
+.home-u ul li {
+    list-style: none;
+    line-height: 3em;
+}
+
+.home-u ul li i {
+    margin-right: .5em;
+}
+
+.home-u ul li a {
+    text-decoration: none;
+    color: rgb(73, 70, 70);
+}
+
+.subscription {
+    margin-bottom: .5em;
+    line-height: 3em;
+}
+
+.subscription h5 {
+    margin-bottom: .8em;
+}
+
+.subscription img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
