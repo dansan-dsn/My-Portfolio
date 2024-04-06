@@ -1,59 +1,76 @@
 
-main {
-    background: rgb(244, 251, 255);
-    border-radius: .8em;
+
+
+.h-icon {
+    font-size: 2rem;
+    cursor: pointer;
 }
 
-.side-bar {
-    background: #f8feff;
-    border-radius: .9em;
-    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); */
-    box-shadow: 0px 8px 16px 4px rgb(221, 220, 220);
+.toggle .h-icon {
+    padding: .1em;
 }
 
-._title {
-    text-align: center;
-}
-
-.bxl-youtube {
-    color: red;
-    font-size: 2em;
+.toggle .h-icon:hover {
+    border-radius: 50%;
+    /* padding: .1em; */
+    /* margin-right: .2em; */
+    background-color: #dfdddd;
 }
 
 .title-word {
-    transform: translate(-200px);
-    font-size: 20px;
+    font-size: x-large;
+    font-weight: 600;
+    /* transform: translateY(-200px); */
 }
 
-i {
-    opacity: .8;
+.search-input {
+    border-radius: 25px 0 0 25px !important;
 }
 
-.home-u ul li {
-    list-style: none;
-    line-height: 3em;
+.input-group-text {
+    margin-right: 2em;
+    border-radius: 0 25px 25px 0 !important;
 }
 
-.home-u ul li i {
-    margin-right: .5em;
+.profile {
+    display: flex;
+    justify-content: right;
 }
 
-.home-u ul li a {
-    text-decoration: none;
-    color: rgb(73, 70, 70);
-}
+    .offcanvas {
+        width: 250px !important;
+    }
+    
+  .create-vid {
+      margin-right: .7em;
+      height: 30px;
+      width: 30px;
+      padding: .3rem;
+    }
+    
+    .create-vid i {
+        color: black;
+        font-size: x-large;
 
-.subscription {
-    margin-bottom: .5em;
-    line-height: 3em;
-}
+    }
+    
+    .create-vid:hover {
+      background-color: #dfdddd;
+      border-radius: 50%;
+      height: 30px;
+      width: 30px;
+      padding: .3rem;
 
-.subscription h5 {
-    margin-bottom: .8em;
-}
+  }
+    .create-vidw .rounded-circle {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+    }
 
-.subscription img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-}
+    .S-microphone {
+        padding:.5em 0;
+        cursor: pointer;    
+        /* background: red; */
+        /* border-radius: 50px; */
+    }

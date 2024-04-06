@@ -11,87 +11,72 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/bootstrap.css" />
   </head>
-  <body class="border-danger ">
-    <main class="mt-5 mx-5 p-4 ">
-      <div class="container-fluid">
+  <body>
+    <header>
+      <div class="container-fluid my-2">
         <div class="row">
-          <div class="side-bar col-3 p-4 ">
-            <div class="_title">
-              <span>
-                <i class="bx bxl-youtube"></i>
-                <span class="title-word">YouTube</span>
-              </span>
-            </div>
-            <div class="row home-u">
-                <ul>
-                    <li><i class='bx bxs-videos'></i>
-                        <a href="">Library</a>
-                    </li>
-                    <li><i class='bx bx-history'></i>
-                        <a href="">History</a>
-                    </li>
-                    <li><i class='bx bxs-movie-play'></i>
-                        <a href="">YouVideos</a>
-                    </li>
-                    <li><i class='bx bxs-videos'></i>
-                        <a href="">Watched later</a>
-                    </li>
-                    <li><i class='bx bxs-like'></i>
-                        <a href="">Liked Videos</a>
-                    </li>
-                    <li><i class='bx bx-chevron-down'></i>
-                        <a href="">Show more</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="subscription">
-                <h5>SUBSCRIPITONS</h5>
-                <div>
-                    <img src="./images/p1.jpeg" alt="psn1">
-                    <span>Walton Non</span>
-                </div>
-                <div>
-                    <img src="./images/p2.jpg" alt="psn1">
-                    <span>Momo Grinded</span>
-                </div>
-                <div>
-                    <img src="./images/p3.jpg" alt="psn1">
-                    <span>Kugwa Non</span>
-                </div>
-                <div>
-                    <img src="./images/p2.jpg" alt="psn1">
-                    <span>Hasley Kein</span>
-                </div>
-                <div>
-                    <img src="./images/p3.jpg" alt="psn1">
-                    <span>Donton Dolnel</span>
-                </div>
-                <div>
-                    <i class='bx bx-chevron-down'></i>
-                    Show 70 more
-                </div>
-            </div>
-            <div class="more-content">
-                <h5>MORE FROM YOUTUBE</h5>
-                <div>
-                    <i class='bx bxs-video'></i>
-                    YouTube Premium
-                </div>
-                <div>
-                    <i class='bx bx-broadcast'></i>
-                    Live
-                </div>
-                <div>
-                    <i class='bx bxl-unity'></i>
-                    Gaming
-                </div>
-            </div>
+          <div class="col-3">
+            <span
+              class="toggle"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasExample"
+              aria-controls="offcanvasExample"
+            >
+              <i class="bx bx-menu h-icon"></i>
+            </span>
+            <span>
+              <i class="bx bxl-youtube h-icon text-danger"></i>
+              <span
+                class="title-word offcanvas-title"
+                id="offcanvasExampleLabe"
+              >
+                YouTube</span
+              >
+            </span>
           </div>
-
-          <div class="main-bar col-8 border border-danger mx-3">timed</div>
+          <div class="col-6">
+            <span class="input-group">
+              <input
+                type="text"
+                class="form-control search-input"
+                aria-label="Dollar amount (with dot and two decimal places)"
+                placeholder="Search"
+              />
+              <span class="input-group-text" title="Search">
+                <i class="bx bx-search"></i>
+              </span>
+              <span title="Search with your voice" class="S-microphone">
+                <i class="bx bxs-microphone"></i>
+              </span>
+            </span>
+          </div>
+          <div class="col-3 profile">
+            <span class="create-vid" title="Create">
+              <a href="#"><i class='bx bx-video-plus'></i></a>
+            </span>
+            <span class="create-vid" title="Notification">
+              <a href="#"> <i class='bx bx-bell'></i></i></a>
+            </span>
+            <span class="create-vidw">
+              <a href="#"><img src="./images/br.jpg" class="rounded-circle" alt="profile pic"></i></a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container-fluid m-2">
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvasExample"
+          aria-labelledby="offcanvasExampleLabel"
+        >
+          <div class="offcanvas-body"></div>
         </div>
       </div>
     </main>
+
     <script src="boostrap.js"></script>
   </body>
 </html>
