@@ -15,23 +15,50 @@ const Home = () => {
             I have done different projects and have come up as a success
           </p>
           <div className="leading-8 my-4">
-            <button
-              type="submit"
-              className="rounded-full bg-emerald-500 px-4 mr-5"
+            <Link
+              to="/contact"
+              className="motion-safe:animate-pulse ease-out duration-300 rounded-full bg-emerald-500 px-4 mr-5 py-2"
             >
               Hire me
-            </button>
+            </Link>
             <span>
               <Link
                 to="/potfolio"
-                className="bg-transparent hover:bg-emerald-400 hover:text-white rounded-full border border-emerald-400 px-4 py-1 text-green-400"
+                className="bg-transparent hover:bg-emerald-400 hover:text-white rounded-full border border-emerald-400 px-4 py-1 text-green-400 ease-in-out duration-300"
               >
                 See my Work
               </Link>
             </span>
           </div>
         </section>
-        <section></section>
+        <section className="py-8 ml-[150px]">
+          <h1 className="text-white my-5">A Few of my skills</h1>
+          <div>
+            <ul className="flex gap-5">
+              <li className="flex flex-col items-center p-4 shadow-lg shadow-green-400/50 rounded">
+                <span className="text-white">20%</span>
+                <p className="text-green-400">Figma</p>
+              </li>
+              <li className="flex flex-col items-center p-4 shadow-lg shadow-amber-400/50 rounded">
+                <span className="text-white">40%</span>
+                <p className="text-amber-400">Tailwind</p>
+              </li>
+              <li className="flex flex-col items-center p-4 shadow-lg shadow-cyan-400/50 rounded">
+                <span className="text-white">60%</span>
+                <p className="text-cyan-400">Nodejs</p>
+              </li>
+              <li className="flex flex-col items-center p-4 shadow-lg shadow-purple-400/50 rounded">
+                <span className="text-white">50%</span>
+                <p className="text-purple-400">Reactjs</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <div>
+          <h2 className="text-white text-right mx-10">
+            All reserved. 2024 Copyright
+          </h2>
+        </div>
       </div>
     </div>
   );
