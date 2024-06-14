@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-evenly py-5">
+    <div className="flex justify-evenly py-5 sticky top-0 blur-background">
       <div className="dsn-family text-white text-3xl mr-9 ">
         <Link to="/dashbord" className="">
           DSN
