@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="bg-home-image">
+    <div className="">
       <Navbar />
       <div>
-        <section className="grid gap-2 place-content-evenly leading-8 text-white mt-[100px] mb-[200px]">
+        <section className="grid gap-2 place-content-evenly leading-8 text-white mt-[100px] mb-[100px] mx-10">
           <h4 className="text-amber-500 text-sm">Hello I'm</h4>
           <h2 className="text-2xl">Dansan Ankunda</h2>
           <h2 className="text-2xl">Coder</h2>
@@ -31,10 +31,10 @@ const Home = () => {
             </span>
           </div>
         </section>
-        <section className="py-8 ml-[150px]">
+        <section className="py-8 mx-20">
           <h1 className="text-white my-5">A Few of my skills</h1>
           <div>
-            <ul className="flex gap-5">
+            <ul className="flex gap-5 flex-wrap">
               <li className="flex flex-col items-center p-4 shadow-lg shadow-green-400/50 rounded">
                 <span className="text-white">20%</span>
                 <p className="text-green-400">Figma</p>
