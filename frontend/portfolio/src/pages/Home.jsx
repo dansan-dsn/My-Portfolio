@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <div className="">
       <Navbar />
@@ -56,7 +57,7 @@ const Home = () => {
         </section>
         <div>
           <h2 className="text-white text-right mx-10">
-            All reserved. 2024 Copyright
+            All rights reserved. {currentYear} &copy; Copyright
           </h2>
         </div>
       </div>

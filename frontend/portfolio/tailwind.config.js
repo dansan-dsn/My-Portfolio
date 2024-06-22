@@ -2,17 +2,22 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}"
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "node_modules/flowbite-react/lib/esm/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       screens: {
-        xs: '320px'
-      }
+        xs: "400px",
+        vs: "100px",
+      },
     },
   },
   plugins: [
-    require('daisyui')
+    // require("flowbite/plugin"),
+    require("daisyui"),
   ],
-}
-
+  daisyui: {
+    themes: ["dim"],
+  },
+};
