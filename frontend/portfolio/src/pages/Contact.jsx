@@ -1,16 +1,78 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { FaMessage } from "react-icons/fa6";
 import { MdDriveFileRenameOutline } from "react-icons/md";
+import { validatePhoneNumber, validateEmail } from "../utils/helper";
+import axios from "axios";
 
 const Contact = () => {
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+  const [category, setCategory] = useState("");
+  const [error, setError] = useState(null);
+
+  const handleForm = async (e) => {
+    e.preventDefault();
+
+    if (!validateEmail(email)) {
+      setError("Please enter a valid email address.");
+      return;
+    }
+
+    if (!validatePhoneNumber(phone)) {
+      setError("Please enter a valid phone number.");
+      return;
+    }
+
+    if (!name) {
+      setError("Please enter your name.");
+      return;
+    }
+
+    if (!message) {
+      setError("Leave some message, please.");
+      return;
+    }
+
+    setError("");
+
+    // Loging API call
+    try {
+      const response = await axios.post(
+        "http://localhost:3003/api/contact-us",
+        {
+          name,
+          email,
+          phone,
+          message,
+          category,
+        }
+      );
+
+      if (response.status === 200) {
+        alert("Form submitted successfully!");
+        setName("");
+        setEmail("");
+        setPhone("");
+        setMessage("");
+        setCategory("");
+      }
+    } catch (error) {
+      setError("Failed to submit form");
+      console.log(error);
+    }
+  };
+
   return (
     <div className="">
       <Navbar />
       <div className="flex justify-center place-items-center min-h-screen mx-2">
-        <form className="w-full xs:w-auto" action="/" method="post">
+        <form className="w-full xs:w-auto" onSubmit={handleForm}>
           <h2 className="text-end text-stone-500 text-4xl my-3">Contact Us</h2>
+          {error && <p className="text-red-500 text-xs pb-1">{error}</p>}
           <label className="input input-bordered flex items-center gap-2 mb-5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +88,8 @@ const Contact = () => {
               className="grow"
               placeholder="Email"
               name="email"
-              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </label>
           <label className="input input-bordered flex items-center gap-2">
@@ -43,7 +106,8 @@ const Contact = () => {
               className="grow"
               placeholder="Phone"
               name="phone"
-              required
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
             />
           </label>
           <label className="input input-bordered flex items-center mt-5 gap-2">
@@ -53,16 +117,24 @@ const Contact = () => {
               className="grow"
               placeholder="Name"
               name="name"
-              required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
           </label>
           <textarea
             className="textarea textarea-bordered my-5 w-full row-"
-            name="message"
             placeholder="Message..."
+            name="message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
           ></textarea>
           <label className="form-control w-full max-w-xs grow">
-            <select className="select select-bordered">
+            <select
+              className="select select-bordered"
+              value={category}
+              name="category"
+              onChange={(e) => setCategory(e.target.value)}
+            >
               <option disabled selected>
                 Category of concern
               </option>
