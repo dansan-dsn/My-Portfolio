@@ -19,17 +19,16 @@ router.post("/contact-us", async (req, res) => {
   }
 });
 
-// router.put("/update", async (req, res) => {
-//   try {
-//     const { email } = req.body;
-//     if (email) {
-//       const data = await collection.findOneAndUpdate(id, req.body, {
-//         new: true,
-//       });
-//     }
-//   } catch (error) {
-//     res.status(500).json({ error: error.message });
-//   }
-// });
+router.put("/update/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const user = await collection.findOneAndUpdate(id);
+    if (!user) res.status(404).json({ message: "User not found" });
+
+    res.status(200).json({ message: "user successfully updated" });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
 
 module.exports = router;

@@ -135,14 +135,14 @@ const Contact = () => {
               name="category"
               onChange={(e) => setCategory(e.target.value)}
             >
-              <option disabled selected>
+              <option value="" disabled>
                 Category of concern
               </option>
-              <option>Graphics Design</option>
-              <option>Web programming</option>
-              <option>Database Management</option>
-              <option>Database Programming</option>
-              <option>Embedded Programming</option>
+              <option value="Graphics Design">Graphics Design</option>
+              <option value="Web Programming">Web programming</option>
+              <option value="Database Management">Database Management</option>
+              <option value="Datebase Programming">Database Programming</option>
+              <option value="Embedded Programming">Embedded Programming</option>
             </select>
           </label>
           <div className="flex justify-end">
