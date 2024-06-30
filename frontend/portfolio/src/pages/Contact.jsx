@@ -41,25 +41,22 @@ const Contact = () => {
 
     // Loging API call
     try {
-      const response = await axios.post(
-        "http://localhost:3003/api/contact-us",
-        {
+      const response = await axios
+        .post("http://localhost:3030/api/contact-us", {
           name,
           email,
           phone,
           message,
           category,
-        }
-      );
-
-      if (response.status === 200) {
-        alert("Form submitted successfully!");
-        setName("");
-        setEmail("");
-        setPhone("");
-        setMessage("");
-        setCategory("");
-      }
+        })
+        .then(() => {
+          setError("Form submitted successfully!");
+          setName("");
+          setEmail("");
+          setPhone("");
+          setMessage("");
+          setCategory("");
+        });
     } catch (error) {
       setError("Failed to submit form");
       console.log(error);
@@ -141,7 +138,7 @@ const Contact = () => {
               <option value="Graphics Design">Graphics Design</option>
               <option value="Web Programming">Web programming</option>
               <option value="Database Management">Database Management</option>
-              <option value="Datebase Programming">Database Programming</option>
+              <option value="Database Programming">Database Programming</option>
               <option value="Embedded Programming">Embedded Programming</option>
             </select>
           </label>
